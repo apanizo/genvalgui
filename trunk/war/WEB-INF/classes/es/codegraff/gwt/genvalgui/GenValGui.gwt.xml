@@ -1,0 +1,14 @@
+<module rename-to='genvalgui'>
+   <stylesheet src="validateui.css"></stylesheet>
+  <!-- Other module inherits                                      -->
+	<inherits name='org.hibernate.validator.HibernateValidator'/>
+  <!-- Specify the app entry point class.                         -->
+    <inherits name="com.google.gwt.logging.Logging"/>
+	<set-property name="gwt.logging.logLevel" value="ALL"/>          
+    <set-property name="gwt.logging.enabled" value="FALSE"/>            
+    <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='rebind'/>
+  <source path='validator'/>
+</module>
