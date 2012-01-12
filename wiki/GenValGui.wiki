@@ -1,5 +1,5 @@
 == GenValGui ==
-|| *GenValGui:* || *Generator* *Validation* *GUIs* ||
+|| *GenValGui:* || *Generator* *Validation* *GUIs* || *3 steps* ||
 
 Basically, we can separate into three different steps the internal behaviour of that framework.
  || * *The first step:* "Introducing info into the Genvalgui Framework" || 
