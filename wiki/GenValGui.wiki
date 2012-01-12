@@ -1,11 +1,14 @@
 == GenValGui ==
-It means: *Generator* *Validation* *GUIs*
+|| *GenValGui:* || *Generator* *Validation* *GUIs* ||
 
 Basically, we can separate into three different steps the internal behaviour of that framework.
-  * *The first step:* "Mark your POJO classes" 
-In the first step the user indicates (using annotations) the POJO classes that will be available to show into the browser, the classes that will be validated and the custom configuration. 
+ || * *The first step:* "Introducing info into the Genvalgui Framework" || 
+In the first step the user have to indicate (using annotations):
+     # The classes that will be validated into the Validation framework     
+     # The POJO classes that will be available to show into the browser.
+     # The custom configuration. 
 
-To implement the first step [represents the info], we use three annotations (_keep in mind, be patient. We’ll see their use in an example later_):
+To implement that, we use three annotations (_keep in mind, be patient. We’ll see their use in an example later_):
 
  - *@GwtValidation:* Represents the entry point to the validation API, you must include the type of classes that will be validated.
 
@@ -44,8 +47,8 @@ To implement the first step [represents the info], we use three annotations (_ke
 Those annotations are placed in the principal class (entry point) of this framework (_keep in mind, it’ll useful to understand completely the example_).
 
 ----
-  * *The second:* "Generate the code in compilation time" 
+  || * *The second:* "Generate the code in compilation time" ||
 The second step is to generate the code of that GUIs, using *Deferred Binding* (to generate the code in compilation time), *CellWidget* (the classes that will represent the attributes and *client databinding*) and the *JSR-303* (to implement all the validation behaviour).
 ----
-  * *The third step*
+  || * *The third step* ||
 ----
