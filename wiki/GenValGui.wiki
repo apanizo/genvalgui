@@ -54,7 +54,6 @@ Basically, this part is divided in two process. The first process is the attenda
 
 Later, the second process consists in generate the different GUIs from the previously generate tree ( the algorithm "paint" a different CellWidget for each attribute of each class, and attach it the necessary validation code)
 
- 
 ----
   || The third step: *Use the generated GUIs* ||
 
@@ -76,3 +75,7 @@ Later, the second process consists in generate the different GUIs from the previ
     }
 }}}
 ----
+
+A good summary of that steps are:
+
+|| <img src="http://genvalgui.googlecode.com/svn/resources/imgs/StepsSummary.png"  alt="Step 1 - Architecture" height="415" width="850" />  ||
