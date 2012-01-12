@@ -19,11 +19,27 @@ That class represents the node of the tree. It saves one sub-tree for each POJO 
   
   * *!GvgGeneratorNodeClass*
 
-That class saves the name of the CellTable that will be associated into the next step.
-Also saves an ArrayList ofGbgGeneratorNodeField. It represents the information of each attribute that the POJO class has.
+That class saves the name of the !CellTable that will be associated into the next step.
+Also saves an !ArrayList of !GvgGeneratorNodeField. It represents the information of each attribute that the POJO class has.
 
   * *!GvgGeneratorNodeField*
 
-In order to save all the information of each attribute we use this class (constraints, a reference to the parent and child nodes (for example if you have an attribute like: ArrayList< String>, we'll have two nodes, one represents the ArrayList and other represents the String type. 
+In order to save all the information of each attribute we use this class (constraints, a reference to the parent and child nodes (for example if you have an attribute like: !ArrayList< String>, we'll have two nodes, one represents the !ArrayList and other represents the String type. 
 
 == Step 2: Generate the GUIs==
+
+One we have the information the next step is to create the differents GUIs in order to be able the use into the app.
+
+|| *How do we this...* ||
+
+The idea is simple, we have one or more classes that has attributes (al of them are representated into the classes that we've seen in the previous step).
+
+So, is mandatory has a good generator code structure listening the different types of the attributes.
+
+For example, if one class has a String, Integer, ArrayList< String> attributes, respectively, we expect that there are one Constructor of each type.
+
+The problem is, 
+
+|| *How do we this...*|| *efficiently?*||
+
+With the implementing of a Chain of Responsibility Pattern.
