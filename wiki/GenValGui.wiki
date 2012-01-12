@@ -10,9 +10,9 @@ In the first step the user have to indicate (using annotations):
 
 To implement that, we use three annotations (_keep in mind, be patient. We’ll see their use in an example later_):
 
- - *@GwtValidation:* Represents the entry point to the validation API, you must include the type of classes that will be validated.
+ - *!@GwtValidation:* Represents the entry point to the validation API, you must include the type of classes that will be validated.
 
- - *@GvgInfoAnnotation:* Like the previous annotation, you must include here the classes that will be parsed to generate their GUIs.
+ - *!@GvgInfoAnnotation:* Like the previous annotation, you must include here the classes that will be parsed to generate their GUIs.
 
 {{{
    package com.example.myproject.genvalgui;
