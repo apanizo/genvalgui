@@ -11,6 +11,8 @@ To implement the first step [represents the info], we use three annotations (_ke
 
  - *@GvgInfoAnnotation:* Like the previous annotation, you must include here the classes that will be parsed to generate their GUIs.
 
+http://code.google.com/p/genvalgui/source/browse/resources/imgs/Step1.png
+
  - *@Caption:* This annotation is used in the POJO classes to indicate the name of the columns. You can customize the appearance of the GUIs.
 
 Those annotations are placed in the principal class (entry point) of this framework (keep in mind, it’ll useful to understand completely the example):
