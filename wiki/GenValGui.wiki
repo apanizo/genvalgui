@@ -10,7 +10,7 @@ To implement the first step [represents the info], we use three annotations (_ke
  - *@GwtValidation:* Represents the entry point to the validation API, you must include the type of classes that will be validated.
 
  - *@GvgInfoAnnotation:* Like the previous annotation, you must include here the classes that will be parsed to generate their GUIs.
-<img src="http://code.google.com/p/genvalgui/source/browse/resources/imgs/Step1.png" alt="Smiley face" height="420" width="620" />
+<img src="http://code.google.com/p/genvalgui/source/browse/resources/imgs/Architecture-Step1.jpg" alt="Smiley face" height="420" width="620" />
 
 
  - *@Caption:* This annotation is used in the POJO classes to indicate the name of the columns. You can customize the appearance of the GUIs.
