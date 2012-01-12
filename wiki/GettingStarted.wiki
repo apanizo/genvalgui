@@ -2,11 +2,11 @@
 == Before to start==
 You must know:
 
-|| The concept of *Deferred Binding* || <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideCodingBasicsDeferred.html">Dev Guide of GWT (*Deferred Binging*)</a> ||
+|| *The concept of *Deferred Binding*: || <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideCodingBasicsDeferred.html">Dev Guide of GWT (*Deferred Binging*)</a>||
 
-  ||With this technique the GenValGui framework creates in compilation time the implementation of the GUIs of the POJOs. In order to support the users validation needs, the generated code includes the implementation of Validation instructions (groups, built-in constraints, custom error messages, and custom  constraints)||
+  || With this technique the GenValGui framework creates in compilation time the implementation of the GUIs of the POJOs. In order to support the users validation needs, the generated code includes the implementation of Validation instructions (groups, built-in constraints, custom error messages, and custom  constraints)||
 
-||Knowledge of the Validation API based on standard *JSR-303* || <a href="http://download.oracle.com/otndocs/jcp/bean_validation-1.0-fr-oth-JSpec/">The spec</a> | <a href="http://code.google.com/p/google-web-toolkit/wiki/BeanValidation">The implementation of that spec in the client side of GWT</a> ||
+|| Knowledge of the Validation API based on standard *JSR-303* || <a href="http://download.oracle.com/otndocs/jcp/bean_validation-1.0-fr-oth-JSpec/">The spec</a> | <a href="http://code.google.com/p/google-web-toolkit/wiki/BeanValidation">The implementation of that spec in the client side of GWT</a> ||
 
 || The principal purpose of this framework || [GenValGui] ||
 
