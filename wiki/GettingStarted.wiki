@@ -1,0 +1,17 @@
+= Getting started =
+== Before to start==
+|| You must know||
+
+|| The concept of *Deferred Binding* || [http://code.google.com/webtoolkit/doc/latest/DevGuideCodingBasicsDeferred.html] ||
+
+  ||With this technique the GenValGui framework creates in compilation time the implementation of the GUIs of the POJOs. In order to support the users validation needs, the generated code includes the implementation of Validation instructions (groups, built-in constraints, custom error messages, and custom  constraints)||
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
