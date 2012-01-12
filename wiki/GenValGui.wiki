@@ -1,2 +1,23 @@
 == GenValGui ==
 It means: *Generator* *Validation* *GUIs*
+
+Basically, we can separate into three different steps the internal behaviour of that framework.
+  * *The first step:* "Mark your POJO classes" 
+In the first step the user indicates (using annotations) the POJO classes that will be available to show into the browser.
+
+To implement the first step [represents the info], we use three annotations (_keep in mind, be patient. We’ll see their use in an example later_):
+
+ - *@GwtValidation:* Represents the entry point to the validation API, you must include the type of classes that will be validated.
+
+ - *@GvgInfoAnnotation:* Like the previous annotation, you must include here the classes that will be parsed to generate their GUIs.
+
+ - *@Caption:* This annotation is used in the POJO classes to indicate the name of the columns. You can customize the appearance of the GUIs.
+
+Those annotations are placed in the principal class (entry point) of this framework (keep in mind, it’ll useful to understand completely the example):
+
+----
+  * *The second:* "Generate the code in compilation time" 
+The second step is to generate the code of that GUIs, using *Deferred Binding* (to generate the code in compilation time), *CellWidget* (the classes that will represent the attributes and *client databinding*) and the *JSR-303* (to implement all the validation behaviour).
+----
+  * *The third step*
+----
