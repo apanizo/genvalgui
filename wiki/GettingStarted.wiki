@@ -11,3 +11,23 @@ You must know:
 || *The principal purpose of this framework* || [GenValGui] ||
 
    ||The !GenValGui framework allows automatic generating of GUIs from the data model of your application. These GUI´s supports automatic data-binding in the client side (if you made any change in the information it saves in the Structure Data of the App, you must be careful because there isn’t support to transport the changes to the DB yet), and an intensive use of data, because the generated code uses !CellWidgets||
+
+==The basic operation of that framework==
+  # Create your POJO and introduce in them the Constraints that you need.
+  # Mark in the GenValGui framework a reference to the POJOs created in the previous step.
+  # Declare an instance of the GenValGui framework
+  # Use the instance of the step 3 to represent the different GUIs of the classes created 
+
+
+----
+
+==How to use step by step==
+
+  ||  *1* ||<a href="http://code.google.com/webtoolkit/download.html">download</a> the lest version of the GWT SDK ||
+
+  || *2* || <a href="http://code.google.com/p/genvalgui/downloads/list">download</a> the last version of *!GenValGui.jar* from  and include it into your project||
+
+  || *3* ||Create the POJO classes that you need (_in the example I put the files into the *com.example.myproject.shared*_) ||
+
+  || *4* || Create the structure (_you can download the example project_) ||
+       || Hello ||
