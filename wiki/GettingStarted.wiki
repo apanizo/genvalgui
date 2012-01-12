@@ -34,9 +34,9 @@ You must know:
 
        || *com.example.myproject.genvalgui* ||
 
-    In this package you must include the classes that bring the entry point information to the framework. 
+      In this package you must include the classes that bring the entry point information to the framework. 
 
-    As you can see, you have to indicate the groups and the classes that will be validate (into the *@!GwtValidation* annotation), the classes that will be automatically generated (into the  *@!GvgInfoAnnotation*) and the method createBuilder. 
+      As you can see, you have to indicate the groups and the classes that will be validate (into the *@!GwtValidation* annotation), the classes that will be automatically generated (into the  *@!GvgInfoAnnotation*) and the method createBuilder. 
 
     All this content must be in a class called *!GenValGuiFactory* (you can copy/paste and change only add your information). When finished, the GWT compiler via deferred binding allows you to use the magic method:
 
@@ -60,7 +60,7 @@ You must know:
 
          || *com.example.myproject.genvalgui.validator.constraints.impl* || 
 
-In this package you must put the class that check if the number is correct (the standard recommend use the same class of the constraint finished by Validator).
+    In this package you must put the class that check if the number is correct (the standard recommend use the same class of the constraint finished by Validator).
 
          || *com.example.myproject.genvalgui.message* ||
 
@@ -72,7 +72,6 @@ In this package you must put the class that check if the number is correct (the 
      *	In the structure files described above
 
   ||  *5* || The fifth step is include in the configuration file (_xxx.gwt.xml_)of your project the references to that classes. ||
-
     {{{
    <replace-with
     class="com.example.myproject.genvalgui.validator.GwtValidatorFactory">
@@ -97,4 +96,23 @@ In this package you must put the class that check if the number is correct (the 
   <source path='client'/>
   <source path='shared'/>
   <source path='genvalgui'/>
+    }}}
+
+    ||  *6* || Use the framework ||
+    {{{
+public void onModuleLoad() {
+     // You can avoid this lines and call to your DB in order to get de objects
+       ArrayList<Person> alPerson = new ArrayList<Person>();
+       Person p = fillPerson();
+       Person p2 = fillPerson();
+       Person p3 = null;
+       alPerson.add(p);alPerson.add(p2);alPerson.add(p3);
+     //----------------------------------------------------------
+		
+     GwtGenValGuiBuilder builder =(GwtGenValGuiBuilder) GenValGuiFactory.createBuilder();
+				
+     CellTable<Person> aux = (CellTable<Person>) builder.buildGui(Person.class, alPerson);
+     
+     RootPanel.get().add(aux);
+}
     }}}
