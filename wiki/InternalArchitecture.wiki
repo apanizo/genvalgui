@@ -40,7 +40,7 @@ For example, if one class has a String, Integer, ArrayList< String> attributes, 
 
 The problem is, 
 
-|| *How do we this...*|| *efficiently?*||
+|| *How do we this...*|| *efficiently?*|| *scalable?* ||
 
 With the implementing of a *Chain of Responsibility Pattern*.
 
@@ -49,6 +49,8 @@ I've created a class (*!CellConstructor*), that implements that pattern. This cl
 For example if the class receives a *String type* and the *order of the chain* are *!JavaUtilCellConstructor |  !PrimitiviveCellConstructor | !StringCellConstructor*, the class !JavaUtilCellConstructor will send the petition to the next participant, and the class !PrimitiveCellConstructor will do the same, because the types that are representing are different. 
 
 Finally, the class !StringCellConstructor will generate the code.
+
+In order to do *scalable*, imagine for a moment, if we want include *support for different types* (for example the *Date.class*). We must create only a class (!DateCellConstructor) that extends from !CellConstructor and include it into the chain *(nothing else. Really good, isn't it?)*
 
 ----
 == Diagram that represents the classes that are involved ==
