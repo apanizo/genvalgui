@@ -33,10 +33,12 @@ You must know:
        || <img src="http://genvalgui.googlecode.com/svn/resources/imgs/estructura.png"  alt="Step 1 - Architecture" height="470" width="370" />  ||
 
        || *com.example.myproject.genvalgui* ||
-       In this package you must include the classes that bring the entry point information to the framework. As you can see, you have to indicate the groups and the classes that will be validate (into the *@!GwtValidation* annotation), the classes that will be automatically generated (into the *@!GvgInfoAnnotation*) and the method createBuilder.
+            In this package you must include the classes that bring the entry point information to the framework. 
        
-       All this content must be in a class called GenValGuiFactory (you can copy/paste and change only add your information). When finished, the GWT compiler via deferred binding allows you to use the magic method:
+            As you can see, you have to indicate the groups and the classes that will be validate (into the *@!GwtValidation* annotation), the classes that will be automatically generated (into the *@!GvgInfoAnnotation*) and the method createBuilder.
+       
+            All this content must be in a class called GenValGuiFactory (you can copy/paste and change only add your information). When finished, the GWT compiler via deferred binding allows you to use the magic method:
 {{{
     public T CellTable  buildGui(Class c, Object o);
 }}}
-that allows create automatically the UI’s and have an instant access to the different user interfaces. ||
+       It allows create automatically the UI’s and have an instant access to the different user interfaces. ||
