@@ -3,19 +3,45 @@ It means: *Generator* *Validation* *GUIs*
 
 Basically, we can separate into three different steps the internal behaviour of that framework.
   * *The first step:* "Mark your POJO classes" 
-In the first step the user indicates (using annotations) the POJO classes that will be available to show into the browser.
+In the first step the user indicates (using annotations) the POJO classes that will be available to show into the browser, the classes that will be validated and the custom configuration. 
 
 To implement the first step [represents the info], we use three annotations (_keep in mind, be patient. We’ll see their use in an example later_):
 
  - *@GwtValidation:* Represents the entry point to the validation API, you must include the type of classes that will be validated.
 
  - *@GvgInfoAnnotation:* Like the previous annotation, you must include here the classes that will be parsed to generate their GUIs.
-<img src="http://code.google.com/p/genvalgui/source/browse/resources/imgs/Architecture-Step1.jpg" alt="Smiley face" height="420" width="620" />
 
+{{{
+   package com.example.myproject.genvalgui;
+
+   public final class GenValGuiFactory {
+
+        @GwtValidation(value = {Person.class, Adress.class, Email.class, ArrayList.class, HashMap.class}
+                      ,groups = {Default.class})
+	public interface GwtValidator extends Validator {
+	}
+	
+	@GvgInfoAnnotation(value={Person.class,Adress.class,Email.class})
+	public interface GwtGenValGuiBuilder extends GvgInterfaceBuilder{
+
+	}
+	public static GwtGenValGuiBuilder createBuilder() {
+		return GWT.create(GwtGenValGuiBuilder.class);
+	}
+}
+}}}
+
+|| || || || <img src="http://genvalgui.googlecode.com/svn/resources/imgs/Architecture-Step1.jpg"  alt="Step 1 - Architecture" height="250" width="520" /> ||
 
  - *@Caption:* This annotation is used in the POJO classes to indicate the name of the columns. You can customize the appearance of the GUIs.
+{{{
+    //Example
+    @Caption(name="Info", button="Mails")
+    private HashMap<String, Email> info;
+}}}
 
-Those annotations are placed in the principal class (entry point) of this framework (keep in mind, it’ll useful to understand completely the example):
+
+Those annotations are placed in the principal class (entry point) of this framework (_keep in mind, it’ll useful to understand completely the example_).
 
 ----
   * *The second:* "Generate the code in compilation time" 
