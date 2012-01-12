@@ -42,4 +42,13 @@ The problem is,
 
 || *How do we this...*|| *efficiently?*||
 
-With the implementing of a Chain of Responsibility Pattern.
+With the implementing of a *Chain of Responsibility Pattern*.
+
+I've created a class (*!CellConstructor*), that implements that pattern. This class, are waiting for petitions to generate code. When it receives once, this class send to the chain (for example if the class receives a *String type* and the *order of the chain* are *!JavaUtilCellConstructor |  !PrimitiviveCellConstructor | !StringCellConstructor*, the class !JavaUtilCellConstructor will send the petition to the next participant, and the class !PrimitiveCellConstructor will do the same, because the types that are representing are different. 
+
+Finally, the class !StringCellConstructor will generate the code).
+
+----
+== Diagram that represents the classes that are involved ==
+
+ <img src="http://genvalgui.googlecode.com/svn/resources/imgs/InternalArchitecture.png"  alt="Step 1 - Architecture" height="415" width="850" />
