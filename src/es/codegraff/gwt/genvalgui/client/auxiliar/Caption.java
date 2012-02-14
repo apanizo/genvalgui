@@ -5,6 +5,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+//Configure the appereance of the CellTable
 
 @Retention(RetentionPolicy.CLASS) 
 @Target(ElementType.FIELD)
