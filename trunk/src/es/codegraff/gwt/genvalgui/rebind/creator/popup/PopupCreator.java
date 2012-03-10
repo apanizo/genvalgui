@@ -7,7 +7,8 @@ import es.codegraff.gwt.genvalgui.client.auxiliar.GvgConstants;
 public class PopupCreator {
 
 	public static void createPopup(SourceWriter src, String namePopup) {
-//		src.println("PopupPanel %s = new PopupPanel();",namePopup);
+//		src.println(" 
+//		PopupPanel %s = new PopupPanel();",namePopup);
 		src.println("final DialogBox %s = new DialogBox();",namePopup);
 	}
 
